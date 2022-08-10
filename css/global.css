@@ -286,8 +286,8 @@ pre {
 }
 
 /* Responsiveness */
-@media (max-width: 720px) {
-  .sr-root {
+ 
+ .sr-root {
     flex-direction: column;
     justify-content: flex-start;
     padding: 48px 20px;
@@ -309,7 +309,7 @@ pre {
   .sr-main {
     width: 100%;
   }
-}
+
 
 /* Pasha styles – Brand-overrides, can split these out */
 :root {
@@ -329,22 +329,6 @@ pre {
   margin-top: 20px;
 }
 
-.pasha-image img {
-  opacity: 1;
-}
-
-.pasha-image-stack img:nth-child(1) {
-  transform: translate(30px, 15px);
-  opacity: 1;
-}
-.pasha-image-stack img:nth-child(2) {
-  transform: translate(-28px, 0px);
-  opacity: 1;
-}
-.pasha-image-stack img:nth-child(3) {
-  transform: translate(64px, -50px);
-  opacity: 1;
-}
 
 /* todo: spinner/processing state, errors, animations */
 

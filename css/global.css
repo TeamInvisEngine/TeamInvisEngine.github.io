@@ -112,39 +112,7 @@ label {
   margin-bottom: 8px;
   display: inline-block;
 }
-
-/* Inputs */
-.sr-input,
-.sr-select,
-input[type="text"],
-input[type="number"] {
-  border: 1px solid var(--gray-border);
-  border-radius: var(--radius);
-  padding: 5px 12px;
-  height: 44px;
-  width: 100%;
-  transition: box-shadow 0.2s ease;
-  background: white;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  color: #32325d;
-}
-.sr-input:focus,
-input[type="text"]:focus,
-button:focus,
-.focused {
-  box-shadow: 0 0 0 1px rgba(50, 151, 211, 0.3), 0 1px 1px 0 rgba(0, 0, 0, 0.07),
-    0 0 0 4px rgba(50, 151, 211, 0.3);
-  outline: none;
-  z-index: 9;
-}
-.sr-input::placeholder,
-input[type="text"]::placeholder,
-input[type="number"]::placeholder {
-  color: var(--gray-light);
-}
-
+ 
 /* Checkbox */
 .sr-checkbox-label {
   position: relative;
@@ -165,12 +133,6 @@ input[type="number"]::placeholder {
   border: 1px solid var(--gray-border);
   border-radius: 4px;
   transition: all 0.2s ease;
-}
-
-.sr-checkbox-label input:focus ~ .sr-checkbox-check {
-  box-shadow: 0 0 0 1px rgba(50, 151, 211, 0.3), 0 1px 1px 0 rgba(0, 0, 0, 0.07),
-    0 0 0 4px rgba(50, 151, 211, 0.3);
-  outline: none;
 }
 
 .sr-checkbox-label input:checked ~ .sr-checkbox-check {
@@ -197,11 +159,7 @@ input[type="number"]::placeholder {
 .sr-select:hover {
   cursor: pointer;
 }
-.sr-select:focus {
-  box-shadow: 0 0 0 1px rgba(50, 151, 211, 0.3), 0 1px 1px 0 rgba(0, 0, 0, 0.07),
-    0 0 0 4px rgba(50, 151, 211, 0.3);
-  outline: none;
-}
+ 
 .sr-select option {
   font-weight: 400;
 }
@@ -543,7 +501,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: none !important;
 }
 
-.banner {
+/* .banner {
   max-width: 825px;
   margin: 0 auto;
   padding: 0 22px;
@@ -563,7 +521,7 @@ input[type="number"]::-webkit-outer-spin-button {
   right: 0;
   text-align: center;
   justify-content: center;
-}
+} */
 
 @keyframes field-in {
   0% {

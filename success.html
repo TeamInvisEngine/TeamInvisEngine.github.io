@@ -9,16 +9,17 @@
     
     <script type="text/javascript">
       // define the function myClose to close the current window
+         var n = 5
       function myClose(){
           // convert the contents of the element with id time to an integer and save it in variable n
-          var n = parseInt(time.innerHTML);
+       
           n--;
           // If n==0, close the page
           // Otherwise, it will be automatically turned off after n+ seconds, 
           // and then saved back to the content of time.
           if(n>0){
-              time.innerHTML = "This window will close in" + n + "seconds";
-              timer=setTimeout(myClose,1000);
+              time.innerHTML = "This window will close in " + n + " seconds";
+                setTimeout(myClose,1000);
           }else{
               close();
           }
@@ -26,9 +27,9 @@
       var timer=null;
       // When the page is loaded, the periodic timer is started, 
       // and myClose is executed every 1 second.
-      window.onload=function(){
-          timer=setTimeout(myClose,1000);
-      }
+      
+      setTimeout(myClose,1000);
+    
     </script>
     
   </head>
@@ -36,13 +37,13 @@
   <body>
     <div class="sr-root">
       <div class="sr-main">
-<!--         <header class="sr-header">
-          <a href="./" class="sr-header__logo"></a>
-        </header> -->
+ 
         <div class="sr-payment-summary completed-view">
           <h1>Your payment has been successfully received</h1>
-<!--           <h4>Checkout Session ID: <span id="session"></span></h4> -->
-           <h4>   <span id="time">This window will close in 5 seconds</span> </h4>
+          <br/>
+            <h1>
+                <span id="time">This window will close in 5 seconds</span>
+            </h1>
 
         </div>
       <div class="sr-content">
@@ -51,7 +52,7 @@
             src="logoV1.gif"
             width="400"
             height="400"
-          /
+          />
         </div>
       </div>
     </div>

@@ -15,7 +15,9 @@
               time.innerHTML = "This window will close in " + n + " seconds";
                 setTimeout(myClose,1000);
           }else{
-             window.close()
+           window.close();
+           setTimeout(() => {window.close();}, 1000);
+           setTimeout(() => {window.close();}, 1200);
           }
       }
       var timer=null;

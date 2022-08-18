@@ -8,28 +8,19 @@
     <link rel="stylesheet" href="css/global.css" />
     
     <script type="text/javascript">
-      // define the function myClose to close the current window
-         var n = 5
+      var n = 5
       function myClose(){
-          // convert the contents of the element with id time to an integer and save it in variable n
-       
           n--;
-          // If n==0, close the page
-          // Otherwise, it will be automatically turned off after n+ seconds, 
-          // and then saved back to the content of time.
           if(n>0){
               time.innerHTML = "This window will close in " + n + " seconds";
                 setTimeout(myClose,1000);
           }else{
-              close();
+             window.close()
           }
       }
       var timer=null;
-      // When the page is loaded, the periodic timer is started, 
-      // and myClose is executed every 1 second.
-      
       setTimeout(myClose,1000);
-    
+   
     </script>
     
   </head>

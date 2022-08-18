@@ -5,7 +5,20 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/global.css" />
-<!--     <script src="https://js.stripe.com/v3/"></script> -->
+      <script type="text/javascript">
+        var n = 5
+        function myClose(){
+            n--;
+            if(n>0){
+                time.innerHTML = "This window will close in " + n + " seconds";
+                  setTimeout(myClose,1000);
+            }else{
+              return null
+            }
+        }
+        var timer=null;
+        setTimeout(myClose,1000);
+      </script> 
   </head>
 
   <body>
@@ -16,7 +29,10 @@
         </header> -->
         <div class="sr-payment-summary completed-view">
           <h1>Your payment was canceled</h1>
-<!--           <h4>Checkout Session ID: <span id="session"></span></h4> -->
+            <br/>
+            <h1>
+                <span id="time">This window will close in 5 seconds</span>
+            </h1>
         </div>
       <div class="sr-content">
         <div class="pasha-image-stack">
@@ -28,14 +44,6 @@
         </div>
       </div>
     </div>
-<!--     <script>
-      var urlParams = new URLSearchParams(window.location.search);
-
-      if (urlParams.has("session_id")) {
-        document.getElementById("session").textContent = urlParams.get(
-          "session_id"
-        );
-      }
-    </script> -->
+ 
   </body>
 </html>

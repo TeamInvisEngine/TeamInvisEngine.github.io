@@ -6,6 +6,22 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/global.css" />
+    
+       <script type="text/javascript">
+        var n = 5
+        function myClose(){
+            n--;
+            if(n>0){
+                time.innerHTML = "This window will close in " + n + " seconds";
+                  setTimeout(myClose,1000);
+            }else{
+              return null
+            }
+        }
+        var timer=null;
+        setTimeout(myClose,1000);
+      </script> 
+    
   </head>
 
   <body>
@@ -14,9 +30,11 @@
  
         <div class="sr-payment-summary completed-view">
           <h1>Accountant updateded</h1>
-<!--           <h4>Checkout Session ID: <span id="session"></span></h4> -->
-        </div>
-         <h4>You can now close this page<span id="session"></span></h4>  
+         </div>
+            <br/>
+            <h1>
+                <span id="time">This window will close in 5 seconds</span>
+            </h1>
       <div class="sr-content">
         <div class="pasha-image-stack">
           <img
@@ -27,13 +45,6 @@
         </div>
       </div>
     </div>
-<!--     <script>
-      var urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.has("session_id")) {
-        document.getElementById("session").textContent = urlParams.get(
-          "session_id"
-        );
-      }
-    </script> -->
+ 
   </body>
 </html>

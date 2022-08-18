@@ -15,9 +15,8 @@
               time.innerHTML = "This window will close in " + n + " seconds";
                 setTimeout(myClose,1000);
           }else{
-            window.close();
-            setTimeout(() => {window.close();}, 2000);
-            setTimeout(() => {window.close();}, 4000);
+           window.open('https://teaminvisengine.github.io/success', '_self', '');
+           window.close();
           }
       }
       var timer=null;

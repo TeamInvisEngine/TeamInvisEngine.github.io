@@ -408,3 +408,7 @@ pre {
     transform: scale(1);
   }
 }
+
+.team-info{
+  font-color: white;
+}
